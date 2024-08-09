@@ -3,9 +3,13 @@
 namespace HyperCompany.Domain.Abstractions;
 public abstract class Vehicle
 {
-
+    public bool IsHeadlightActive { get; set; }
+    public string Tire { get; set; } = default!;
+    public string Headlight { get; set; } = default!;
     public Guid Id { get; set; }
-
     public required VehicleEnum Color { get; set; }
-
+    protected Vehicle()
+    {
+        Id = Guid.NewGuid();
+    }
 }
