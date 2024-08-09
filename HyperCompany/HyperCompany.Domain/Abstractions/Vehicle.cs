@@ -1,8 +1,9 @@
 ﻿namespace HyperCompany.Domain.Abstractions;
-public abstract class Entity
+public abstract class Vehicle
 {
+    
     public Guid Id { get; set; }
-    protected Entity()
+    protected Vehicle()
     {
         Id = Guid.NewGuid();
     }
