@@ -1,6 +1,13 @@
-﻿using HyperCompany.Domain.Entities;
+﻿using GenericRepository;
+using HyperCompany.Domain.Entities;
 using HyperCompany.Infrastructure.Context;
 using HyperCompany.Infrastructure.Options;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Scrutor;
+using System.Reflection;
 
 namespace HyperCompany.Infrastructure;
 public static class DependencyInjection

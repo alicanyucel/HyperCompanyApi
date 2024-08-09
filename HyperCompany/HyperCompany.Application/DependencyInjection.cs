@@ -1,4 +1,6 @@
-﻿using HyperCompany.Application.Behaviors;
+﻿using FluentValidation;
+using HyperCompany.Application.Behaviors;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HyperCompany.Application;
 public static class DependencyInjection
