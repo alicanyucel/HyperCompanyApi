@@ -1,6 +1,9 @@
-﻿using FluentValidation;
+﻿
+
+using FluentValidation;
 
 namespace HyperCompany.Application.Features.Auth.Login;
+
 public sealed class LoginCommandValidator : AbstractValidator<LoginCommand>
 {
     public LoginCommandValidator()

@@ -1,4 +1,5 @@
-﻿using HyperCompany.Application.Features.Auth.Login;
+﻿
+using HyperCompany.Application.Features.Auth;
 using HyperCompany.Domain.Entities;
 
 namespace HyperCompany.Application.Services;

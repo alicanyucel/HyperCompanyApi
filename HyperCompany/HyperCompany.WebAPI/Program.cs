@@ -1,6 +1,7 @@
 using DefaultCorsPolicyNugetPackage;
 using HyperCompany.Application;
 using HyperCompany.Infrastructure;
+using HyperCompany.WebAPI.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 
@@ -10,6 +11,7 @@ builder.Services.AddDefaultCors();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
+builder.Services.AddExceptionHandler<ExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 builder.Services.AddControllers();
@@ -56,5 +58,6 @@ app.UseExceptionHandler();
 
 app.MapControllers();
 
+ExtensionsMiddleware.CreateFirstUser(app);
 
 app.Run();

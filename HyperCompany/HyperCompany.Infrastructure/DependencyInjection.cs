@@ -1,6 +1,5 @@
 ﻿using GenericRepository;
 using HyperCompany.Domain.Entities;
-using HyperCompany.Infrastructure.Context;
 using HyperCompany.Infrastructure.Options;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
