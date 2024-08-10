@@ -24,5 +24,5 @@ internal sealed class ApplicationDbContext : IdentityDbContext<AppUser, Identity
         builder.Ignore<IdentityUserToken<Guid>>();
         builder.Ignore<IdentityUserRole<Guid>>();
         builder.Ignore<IdentityUserClaim<Guid>>();
-    }
+    } // DENEME
 }
