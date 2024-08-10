@@ -1,4 +1,5 @@
 ﻿
+using HyperCompany.Application.Features.Boat.CreateBoat;
 using HyperCompany.WebAPI.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -15,7 +16,14 @@ public class BoatsController : ApiController
     public BoatsController(IMediator mediator) : base(mediator)
     {
     }
+    [HttpPost]
+    public async Task<IActionResult> Create(CreateBoatCommand request, CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(request, cancellationToken);
+        return StatusCode(response.StatusCode, response);
 
-    
+    }
+   
+
 }
 
