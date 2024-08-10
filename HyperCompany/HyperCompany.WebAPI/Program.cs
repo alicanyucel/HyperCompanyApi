@@ -41,7 +41,13 @@ builder.Services.AddSwaggerGen(setup =>
                     { jwtSecuritySheme, Array.Empty<string>() }
                 });
 });
-
+builder.Services.AddCors(opt =>
+{
+    opt.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+    });
+});
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -51,11 +57,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCookiePolicy();
+app.UseStaticFiles();
 app.UseCors();
-
 app.UseExceptionHandler();
-
 app.MapControllers();
 
 ExtensionsMiddleware.CreateFirstUser(app);
