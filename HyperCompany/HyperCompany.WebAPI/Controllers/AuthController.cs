@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HyperCompany.WebAPI.Controllers;
 [AllowAnonymous]
-public sealed class AuthsController : ApiController
+public sealed class AuthController : ApiController
 {
 /*
    {
@@ -15,7 +15,7 @@ public sealed class AuthsController : ApiController
    } yazarak auth controllerden token alabilirsiniz
     
  */
-    public AuthsController(IMediator mediator) : base(mediator)
+    public AuthController(IMediator mediator) : base(mediator)
     {
     }
     [HttpPost]
