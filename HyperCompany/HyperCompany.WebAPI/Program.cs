@@ -1,13 +1,11 @@
 using HyperCompany.Application;
 using HyperCompany.Infrastructure;
 using HyperCompany.WebAPI.Middlewares;
-using DefaultCorsPolicyNugetPackage;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDefaultCors();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
