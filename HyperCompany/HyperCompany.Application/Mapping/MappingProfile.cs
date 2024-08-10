@@ -9,7 +9,7 @@ public sealed class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<CreateUserCommand, AppUser>().ReverseMap();
-        CreateMap<UpdateUserCommand, AppUser>().ReverseMap();
+        CreateMap<CreateUserCommand, AppUser>();
+        CreateMap<UpdateUserCommand, AppUser>();
     }
 }
