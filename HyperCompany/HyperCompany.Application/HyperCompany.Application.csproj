@@ -20,4 +20,12 @@
     <ProjectReference Include="..\HyperCompany.Domain\HyperCompany.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Boat\DeleteBoatById\" />
+    <Folder Include="Features\Boat\UpdateBoat\" />
+    <Folder Include="Features\Boat\RemoveBoatById\" />
+    <Folder Include="Features\Bus\CreateBus\" />
+    <Folder Include="Features\Car\CreateCar\" />
+  </ItemGroup>
+
 </Project>
