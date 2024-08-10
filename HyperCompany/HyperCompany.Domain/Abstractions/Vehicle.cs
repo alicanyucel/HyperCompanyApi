@@ -7,7 +7,7 @@ public abstract class Vehicle
     public string Tire { get; set; } = default!;
     public string Headlight { get; set; } = default!;
     public Guid Id { get; set; }
-    public required VehicleEnum Color { get; set; }
+    public VehicleEnum Color { get; set; } = VehicleEnum.Purple;
     protected Vehicle()
     {
         Id = Guid.NewGuid();
