@@ -6,7 +6,7 @@ using TS.Result;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using HyperCompany.Domain.Repositories;
-namespace EAppointment.Application.Features.Users.CreateUser;
+namespace HyperCompany.Application.Features.Users.CreateUser;
 
 internal sealed class CreateUserCommandHandler(
     UserManager<AppUser> userManager,

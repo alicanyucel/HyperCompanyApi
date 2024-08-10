@@ -1,6 +1,6 @@
 ﻿
 
-using HyperCompany.Application.Features.Roles.RoleSync.EAppointment.Application.Features.Roles.RoleSync;
+using HyperCompany.Domain.Entities;
 
 namespace HyperCompany.Application;
 

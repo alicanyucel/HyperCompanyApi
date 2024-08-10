@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using TS.Result;
 
-namespace EAppointment.Application.Features.Users.CreateUser;
+namespace HyperCompany.Application.Features.Users.CreateUser;
 public sealed record CreateUserCommand(
     string FirstName,
     string LastName,
