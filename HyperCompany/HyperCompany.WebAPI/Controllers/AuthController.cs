@@ -8,11 +8,13 @@ namespace HyperCompany.WebAPI.Controllers;
 [AllowAnonymous]
 public sealed class AuthController : ApiController
 {
-    /*
-     * {
-  "emailOrUserName": "admin",
-  "password": "1" yazarak auth controllerden token alabilirsiniz
-     */
+/*
+   {
+    "emailOrUserName": "admin",
+    "password": "1"
+   } yazarak auth controllerden token alabilirsiniz
+    
+ */
     public AuthController(IMediator mediator) : base(mediator)
     {
     }
