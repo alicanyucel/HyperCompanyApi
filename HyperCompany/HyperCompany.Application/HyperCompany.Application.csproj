@@ -20,4 +20,11 @@
     <ProjectReference Include="..\HyperCompany.Domain\HyperCompany.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Users\DeleteUserById\" />
+    <Folder Include="Features\Users\GetAllUsers\" />
+    <Folder Include="Features\Users\GetAllRolesForUsers\" />
+    <Folder Include="Features\Users\UpdateUser\" />
+  </ItemGroup>
+
 </Project>
