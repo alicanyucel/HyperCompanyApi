@@ -1,5 +1,4 @@
 ﻿
-
 using Microsoft.AspNetCore.Identity;
 
 namespace HyperCompany.Domain.Entities;
