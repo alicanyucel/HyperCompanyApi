@@ -2,7 +2,6 @@
 using HyperCompany.Application.Features.Boat.CreateBoat;
 using HyperCompany.Domain.Entities;
 using HyperCompany.Domain.Enums;
-using System.Numerics;
 
 namespace HyperCompany.Application.Mapping;
 public sealed class MappingProfile : Profile
