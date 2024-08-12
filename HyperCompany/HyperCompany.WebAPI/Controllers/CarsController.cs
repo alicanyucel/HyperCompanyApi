@@ -1,4 +1,5 @@
 ﻿using HyperCompany.Application.Features.Car.CreateCar;
+using HyperCompany.Application.Features.Car.DeleteCar;
 using HyperCompany.Application.Features.Car.GetAllCars;
 using HyperCompany.Application.Features.Car.UpdateCar;
 using HyperCompany.WebAPI.Abstractions;
@@ -30,7 +31,7 @@ public class CarsController : ApiController
 
     }
     [HttpPost]
-    public async Task<IActionResult> DeleteCarById(GetCarQuery request, CancellationToken cancellationToken)
+    public async Task<IActionResult> DeleteCarById(DeleteCarByIdCommand request, CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
         return StatusCode(response.StatusCode, response);
