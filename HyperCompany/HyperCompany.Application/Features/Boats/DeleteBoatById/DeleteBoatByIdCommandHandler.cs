@@ -7,9 +7,9 @@ namespace HyperCompany.Application.Features.Boats.DeleteBoatById;
 
 internal sealed class DeleteBoatByIdCommandHandler(
     IBoatRepository boatRepository,
-    IUnitOfWork unitOfWork) : IRequestHandler<UpdateBoatByIdCommand, Result<string>>
+    IUnitOfWork unitOfWork) : IRequestHandler<DeleteBoatByIdCommand, Result<string>>
 {
-    public async Task<Result<string>> Handle(UpdateBoatByIdCommand request, CancellationToken cancellationToken)
+    public async Task<Result<string>> Handle(DeleteBoatByIdCommand request, CancellationToken cancellationToken)
     {
         HyperCompany.Domain.Entities.Boat? boat = await boatRepository.GetByExpressionAsync(p => p.Id == request.Id, cancellationToken);
         if (boat is null)
