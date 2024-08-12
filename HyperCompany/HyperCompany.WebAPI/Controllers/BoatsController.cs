@@ -1,4 +1,5 @@
 ﻿using HyperCompany.Application.Features.Boat.CreateBoat;
+using HyperCompany.Application.Features.Boats.GetAllBoat;
 using HyperCompany.WebAPI.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -23,7 +24,14 @@ public class BoatsController : ApiController
         return StatusCode(response.StatusCode, response);
 
     }
-   
+    [HttpPost]
+    public async Task<IActionResult> GetAll(GetBoatsQuery request, CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(request, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+
+    }
+
 
 }
 
