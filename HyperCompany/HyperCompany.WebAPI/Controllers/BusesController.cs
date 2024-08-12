@@ -1,4 +1,5 @@
 ﻿using HyperCompany.Application.Features.Bus.CreateBus;
+using HyperCompany.Application.Features.Bus.GetAllBus;
 using HyperCompany.WebAPI.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -18,6 +19,13 @@ public class BusesController : ApiController
     public async Task<IActionResult> Create(CreateBusCommand request, CancellationToken cancellationToken)
     {
 
+        var response = await _mediator.Send(request, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+
+    }
+    [HttpPost]
+    public async Task<IActionResult> GetAll(GetBusQuery request, CancellationToken cancellationToken)
+    {
         var response = await _mediator.Send(request, cancellationToken);
         return StatusCode(response.StatusCode, response);
 
