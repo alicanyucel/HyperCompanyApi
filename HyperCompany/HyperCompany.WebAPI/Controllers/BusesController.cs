@@ -1,4 +1,4 @@
-﻿using HyperCompany.Application.Features.Auth.Login;
+﻿using HyperCompany.Application.Features.Bus.CreateBus;
 using HyperCompany.WebAPI.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -9,20 +9,17 @@ namespace HyperCompany.WebAPI.Controllers;
 [Route("api/[controller]/[action]")]
 [ApiController]
 [AllowAnonymous]
-public sealed class AuthsController : ApiController
+public class BusesController : ApiController
 {
-    /*
-     useroremailname="admin"
-    password="1" yazarak token alabilirsiniz.
-     */
-    public AuthsController(IMediator mediator) : base(mediator)
+    public BusesController(IMediator mediator) : base(mediator)
     {
     }
-
     [HttpPost]
-    public async Task<IActionResult> Login(LoginCommand request, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create(CreateBusCommand request, CancellationToken cancellationToken)
     {
+
         var response = await _mediator.Send(request, cancellationToken);
         return StatusCode(response.StatusCode, response);
+
     }
 }

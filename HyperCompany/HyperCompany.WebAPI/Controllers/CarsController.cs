@@ -1,4 +1,4 @@
-﻿
+﻿using HyperCompany.Application.Features.Car.CreateCar;
 using HyperCompany.WebAPI.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -12,5 +12,13 @@ public class CarsController : ApiController
 {
     public CarsController(IMediator mediator) : base(mediator)
     {
+    }
+    [HttpPost]
+    public async Task<IActionResult> Create(CreateCarCommand request, CancellationToken cancellationToken)
+    {
+
+        var response = await _mediator.Send(request, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+
     }
 }

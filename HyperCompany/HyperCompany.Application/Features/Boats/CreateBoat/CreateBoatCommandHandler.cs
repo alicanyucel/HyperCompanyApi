@@ -9,11 +9,11 @@ using TS.Result;
 
 namespace HyperCompany.Application.Features.Boats.CreateBoat;
 
-internal sealed class CreateBoatComamndHandler(IBoatRepository boatRepository, IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<CreateBoatCommand, Result<string>>
+internal sealed class CreateBoatComamndHandler(IBoatRepository boatRepository, IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<CreatBoatCommand, Result<string>>
 {
     public IBoatRepository BoatRepository { get; } = boatRepository;
 
-    public async Task<Result<string>> Handle(CreateBoatCommand request, CancellationToken cancellationToken)
+    public async Task<Result<string>> Handle(CreatBoatCommand request, CancellationToken cancellationToken)
     {
         HyperCompany.Domain.Entities.Boat boat = mapper.Map<HyperCompany.Domain.Entities.Boat>(request);
 
