@@ -1,5 +1,7 @@
 ﻿using HyperCompany.Application.Features.Bus.CreateBus;
+using HyperCompany.Application.Features.Bus.DeleteBus;
 using HyperCompany.Application.Features.Bus.GetAllBus;
+using HyperCompany.Application.Features.Bus.UpdateBus;
 using HyperCompany.WebAPI.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -30,5 +32,18 @@ public class BusesController : ApiController
         return StatusCode(response.StatusCode, response);
 
     }
-   
+    [HttpPost]
+    public async Task<IActionResult> DeleteById(DeleteBusByIdCommand request, CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(request, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+
+    }
+    [HttpPost]
+    public async Task<IActionResult> Update(UpdateBusCommand request, CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(request, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+
+    }
 }
