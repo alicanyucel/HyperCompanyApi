@@ -4,6 +4,7 @@ using HyperCompany.Application.Features.Boats.UpdateBoat;
 using HyperCompany.Application.Features.Bus.CreateBus;
 using HyperCompany.Application.Features.Bus.UpdateBus;
 using HyperCompany.Application.Features.Car.CreateCar;
+using HyperCompany.Application.Features.Car.UpdateCar;
 using HyperCompany.Domain.Entities;
 using HyperCompany.Domain.Enums;
 
@@ -29,5 +30,6 @@ public sealed class MappingProfile : Profile
         CreateMap<CreateCarCommand, Car>().ReverseMap();
         CreateMap<UpdateBoatCommand, Boat>().ReverseMap();
         CreateMap<UpdateBusCommand, Bus>().ReverseMap();
+        CreateMap<UpdateCarCommand, Car>().ReverseMap();
     }
 }
